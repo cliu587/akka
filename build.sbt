@@ -446,6 +446,7 @@ lazy val clusterShardingTyped = akkaModule("akka-cluster-sharding-typed")
     persistenceTyped % "test->test",
     remote % "compile->CompileJdk9;test->test",
     remoteTests % "test->test",
+    remoteTests % "test->test;multi-jvm->multi-jvm",
     jackson % "test->test")
   .settings(javacOptions += "-parameters") // for Jackson
   .settings(AutomaticModuleName.settings("akka.cluster.sharding.typed"))
